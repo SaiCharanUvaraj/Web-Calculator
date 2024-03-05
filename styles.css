@@ -1,0 +1,155 @@
+body
+{
+    background-color: #FFDD95;
+}
+.header
+{
+    background-color:#DC8449;
+    font-size: xx-large;
+    font-family: Cambria;
+    text-align: center;
+}
+.key
+{
+    background-color:#E8C872;
+    border-radius: 0.5rem;
+    box-shadow:3px 3px 5px black;
+    font-size:large;
+    margin: 0.5rem;
+    color: black;
+    transition:0.1s;
+}
+.key:hover
+{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition:0.1s;
+}
+.key:active
+{
+    cursor: pointer;
+    transform: scale(0.9);
+    transition:0.1s;
+}
+.result
+{
+    background-color:#FFF3CF;
+    text-align: center;
+    height: 7rem;
+    border-radius: 1rem;
+    border: #FFDD95 0.2rem solid; 
+    margin:0.5rem;
+    font-size: x-large;
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    font-family: Times New Roman;
+}
+.calculator
+{
+    background-color:#FFDD95;
+    align-items: center;
+    text-align: center;
+}
+.keypad
+{
+    background-color:#FF9843;
+    padding:1rem;
+    border: #DC8449 0.4rem solid;
+    border-radius: 3rem;
+    margin-left: 35rem;
+    margin-right:35rem;
+    margin-top:7rem;
+}
+
+/* Animations */
+.clearingAnimationOnResult
+{
+    animation-name: clearingAnimation;
+    animation-duration: 0.5s;
+}
+@keyframes clearingAnimation 
+{
+    0% {transform:scale(1);}
+    50% {transform:scale(0);}
+    100%{transform:scale(1);}
+}
+.errorAnimationOnResult
+{
+    animation-name: errorAnimation;
+    animation-duration: 0.5s;
+}
+@keyframes errorAnimation 
+{
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+.resultAnimationOnResult
+{
+    animation-name: resultAnimation;
+    animation-duration: 0.5s;
+}
+@keyframes resultAnimation 
+{
+    0% { transform: rotateX(0deg); }
+    25% { transform: rotateX(90deg); }
+    50% { transform: rotateX(180deg); }
+    75% { transform: rotateX(270deg); }
+    100% { transform: rotateX(360deg); }
+}
+.movingAnimationOnCalculator
+{
+    animation-name: movingAnimation;
+    animation-duration: 1s;
+}
+@keyframes movingAnimation 
+{
+    0% { transform: translateX(-1000px); }
+    50% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+}
+
+/*Media queries*/
+@media only screen and (min-width: 1100px) and (max-width: 1300px)
+{
+    .keypad
+    {
+        margin-left: 30rem;
+        margin-right:30rem;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1100px)
+{
+    .keypad
+    {
+        margin-left: 25rem;
+        margin-right:25rem;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px)
+{
+    .keypad
+    {
+        margin-left: 15rem;
+        margin-right:15rem;
+    }
+}
+@media only screen and (min-width: 520px) and (max-width: 768px)
+{
+    .keypad
+    {
+        margin-left: 10rem;
+        margin-right:10rem;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width: 520px)
+{
+    .keypad
+    {
+        margin-left: 2rem;
+        margin-right:2rem;
+    }
+}
